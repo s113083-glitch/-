@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#game-container {
+    width: 600px;
+    height: 200px;
+    border: 2px solid #000;
+    position: relative;
+    overflow: hidden;
+}
+
+#dino {
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+#obstacle {
+    width: 20px;
+    height: 40px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    right: -20px; /* Start off-screen */
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+}
+
+.jump {
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump {
+    0% { bottom: 0; }
+    50% { bottom: 100px; }
+    100% { bottom: 0; }
+}
